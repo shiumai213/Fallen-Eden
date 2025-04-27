@@ -2,23 +2,18 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ButtonClickExample : MonoBehaviour
+[RequireComponent(typeof(Button))]
+public class StartButton : MonoBehaviour
 {
-    public Button myButton;
-    public bool GameGo = false;
-
-    void Start()
-    {        
-        // ボタンにリスナーを追加
-        myButton.onClick.AddListener(OnButtonClick);
-    }
-
-    void OnButtonClick()
+    private void Start()
     {
-        // ボタンが押された時の処理
-        GameGo = true;
-        Debug.Log("ボタンが押されました！");
+        var button = GetComponent<Button>();
+        button.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene("NovelPart");
+        });
     }
 }

@@ -17,6 +17,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField] private SoundManager soundManager; //bgm
     public int storyIndex { get; private set; } // 現在のストーリーインデックス
     public int textIndex { get; private set; } // 現在のテキストインデックス
+    private Coroutine typingCoroutine;
 
     private bool finishText = false;
 
@@ -29,13 +30,26 @@ public class StoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (finishText)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                textIndex++;
-                storyText.text = "";
-                ProgressionStory(storyIndex);
+                if (!finishText)
+                {
+                    if (typingCoroutine != null)
+                    {
+                        StopCoroutine(typingCoroutine);
+                    }
+                    var currentStoryText = storyDatas[storyIndex].stories[textIndex].StoryText;
+                    storyText.text = currentStoryText;
+                    finishText = true;
+                }
+                else
+                {
+                    textIndex++;
+                    storyText.text = "";
+                    finishText = false;
+                    ProgressionStory(storyIndex);
+                }
             }
         }
     }
@@ -49,9 +63,13 @@ public class StoryManager : MonoBehaviour
             characterImage.sprite = storyElement.CharacterImage;
             characterName.text = storyElement.CharacterName;
             
+            if(typingCoroutine !=null)
+            {
+                StopCoroutine(typingCoroutine);
+            }
             
             //storyText.text = storyElement.StoryText;
-            StartCoroutine(TypeSentence(_storyIndex, _textIndex));
+            typingCoroutine = StartCoroutine(TypeSentence(_storyIndex, _textIndex));
         }
 
     private void ProgressionStory(int _storyIndex)
@@ -78,6 +96,8 @@ public class StoryManager : MonoBehaviour
 
     private IEnumerator TypeSentence(int _storyIndex, int _textIndex)
     {
+        storyText.text = "";
+        finishText = false;
         foreach (var letter in storyDatas[_storyIndex].stories[_textIndex].StoryText.ToCharArray())
         {
             storyText.text+= letter;
