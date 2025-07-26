@@ -358,7 +358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fallen-Eden\n\u62D3\u4E5FVS\u30DE\u30A4\u30AF\u30ED\u30BD\u30D5\u30C8"
+  m_text: "Fallen-Eden\n\u5F8C\u85E4\u6D77\u91CCVS\u30DE\u30A4\u30AF\u30ED\u30BD\u30D5\u30C8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7df5ed2fc2f85f542b92cdab313a0687, type: 2}
   m_sharedMaterial: {fileID: -1287695411769427760, guid: 7df5ed2fc2f85f542b92cdab313a0687, type: 2}

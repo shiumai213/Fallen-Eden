@@ -7,7 +7,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource bgmAudioSource = default;
     [SerializeField] private AudioClip[] bgmclips;
 
-    //[SerializeField] private AudioSource SoundEffect = default;
+    [SerializeField] private AudioSource seAudioSource = default;
     //[SerializeField] private AudioClip[] SFXClips;
 
     public enum BGM
@@ -22,6 +22,15 @@ public class SoundManager : MonoBehaviour
         {
             bgmAudioSource.clip = bgmclips[(int)(bgm)];
             bgmAudioSource.Play();
+        }
+    }
+
+        // 効果音を再生する汎用メソッド
+    public void PlaySE(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            seAudioSource.PlayOneShot(clip);
         }
     }
 }

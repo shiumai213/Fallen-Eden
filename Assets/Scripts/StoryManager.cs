@@ -11,7 +11,7 @@ public class StoryManager : MonoBehaviour
     [SerializeField] private Image background; // 背景画像
     [SerializeField] private Image characterImage; // キャラクター画像
     //[SerializeField] private Image characterImage2; //キャラ画像2
-    //[SerializeField] private AudioClip SoundEffect; //効果音
+    [SerializeField] private AudioClip SoundEffect; //効果音
     [SerializeField] private TextMeshProUGUI storyText; // ストーリーテキスト
     [SerializeField] private TextMeshProUGUI characterName; // キャラクター名
     [SerializeField] private SoundManager soundManager; //bgm
@@ -63,6 +63,12 @@ public class StoryManager : MonoBehaviour
             characterImage.sprite = storyElement.CharacterImage;
             characterName.text = storyElement.CharacterName;
             
+            // 効果音が設定されていれば再生
+            if (storyElement.SFX != null)
+            {
+                soundManager.PlaySE(storyElement.SFX);
+            }
+
             if(typingCoroutine !=null)
             {
                 StopCoroutine(typingCoroutine);

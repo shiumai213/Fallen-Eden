@@ -22,7 +22,7 @@ public class Story
     //キャラ画像2(必要に応じて使用)
     //public Sprite CharaImage2;
     //効果音
-    //public AudioClip SFX;
+    public AudioClip SFX;
     // ストーリーテキスト（複数行対応）
     [TextArea]
     public string StoryText;
