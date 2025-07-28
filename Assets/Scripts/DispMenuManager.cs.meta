@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8aad61706aa2a884c8207f12fc0cb616
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _displayMenuObject: {instanceID: 0}
+  - LogButtonPrefab: {fileID: 2091785153594652374, guid: eba9a988cd2a4e942bf85a3583d21c1d, type: 3}
+  - backlogDisplay: {instanceID: 0}
+  - backlogPrefab: {fileID: 6695455141083694916, guid: 7dc0d4ef082ba3847bb39bf8e012f598, type: 3}
+  - _logButtonInactiveSprite: {instanceID: 0}
+  - _logButtonActiveSprite: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

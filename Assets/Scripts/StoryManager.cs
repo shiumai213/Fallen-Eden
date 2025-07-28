@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
-    [SerializeField] private StoryData[] storyDatas; // ストーリーデータの配列
+    [SerializeField] public StoryData[] storyDatas; // ストーリーデータの配列
 
     [SerializeField] private Image background; // 背景画像
     [SerializeField] private Image characterImage; // キャラクター画像
@@ -15,6 +15,10 @@ public class StoryManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText; // ストーリーテキスト
     [SerializeField] private TextMeshProUGUI characterName; // キャラクター名
     [SerializeField] private SoundManager soundManager; //bgm
+    
+    // DispMenuManagerへの参照
+    private DispMenuManager dispMenuManager;
+    
     public int storyIndex { get; private set; } // 現在のストーリーインデックス
     public int textIndex { get; private set; } // 現在のテキストインデックス
     private Coroutine typingCoroutine;
@@ -23,6 +27,9 @@ public class StoryManager : MonoBehaviour
 
     private void Start()
     {
+        // DispMenuManagerを取得
+        dispMenuManager = FindObjectOfType<DispMenuManager>();
+        
         storyText.text = "";
         characterName.text = "";
         SetStoryElement(storyIndex, textIndex);
@@ -45,12 +52,28 @@ public class StoryManager : MonoBehaviour
                 }
                 else
                 {
+                    // 現在のストーリーをバックログに追加
+                    AddCurrentStoryToBacklog();
+                    
                     textIndex++;
                     storyText.text = "";
                     finishText = false;
                     ProgressionStory(storyIndex);
                 }
             }
+        }
+    }
+    
+    // 現在のストーリーをバックログに追加
+    private void AddCurrentStoryToBacklog()
+    {
+        if (dispMenuManager != null && 
+            storyDatas != null && 
+            storyIndex < storyDatas.Length && 
+            textIndex < storyDatas[storyIndex].stories.Count)
+        {
+            var currentStory = storyDatas[storyIndex].stories[textIndex];
+            dispMenuManager.AddToBacklog(currentStory.StoryText, currentStory.CharacterName);
         }
     }
     
