@@ -28,5 +28,18 @@ public class Story
     public string StoryText;
     // キャラクター名
     public string CharacterName;
-    
+    // 選択肢（未設定=通常の次行に進む）
+    public List<ChoiceOption> Choices = new List<ChoiceOption>();
+}
+
+// 選択肢1件分のデータ
+[System.Serializable]
+public class ChoiceOption
+{
+    // ボタンに表示するテキスト
+    public string Text;
+    // 遷移先のStoryData配列インデックス（-1なら現在の章のまま）
+    public int NextStoryIndex = -1;
+    // 遷移先の行インデックス（-1ならデフォルトで次行）
+    public int NextTextIndex = -1;
 }

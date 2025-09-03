@@ -18,39 +18,53 @@ MonoBehaviour:
     SFX: {fileID: 8300000, guid: 5b5bfa9032c981d48a3aeb7745e5ef28, type: 3}
     StoryText: "\u30D1\u30F3\u30C0\u304C\u6E1B\u3063\u305F\u306E\u3067\u3001\u6BBA\u3057\u307E\u3059!"
     CharacterName: "\u307F\u3061\u304A\u3057\u3083\u304B\u3057\u3083\u307E"
+    Choices: []
   - Background: {fileID: 21300000, guid: f7850828e20da414a87b5fcfbb79cecc, type: 3}
     CharacterImage: {fileID: 21300000, guid: f3f6506590c09dc4fa3e8efe68f74903, type: 3}
     SFX: {fileID: 8300000, guid: 7b826940212509d4d8876dbc3a19ec68, type: 3}
     StoryText: "\u30AD\u30E3\u30FC\uFF01"
     CharacterName: "\u5E03\u5DDD"
+    Choices: []
   - Background: {fileID: 21300000, guid: f7850828e20da414a87b5fcfbb79cecc, type: 3}
     CharacterImage: {fileID: 21300000, guid: c84f11c02becb644f9930082991d4cf3, type: 3}
     SFX: {fileID: 8300000, guid: e30ec89170b1abd478f03b71afcbee3b, type: 3}
     StoryText: "\u67F1\u306E\u7537\u3068\u8D64\u77F3\u3092\u96C6\u3081\u3066\u3001\u7A76\u6975\u751F\u7269\u3092\u4F5C\u308A\u305F\u3044\u3093\u3067\u3059\u3088\uFF5E"
     CharacterName: "\u307F\u3061\u304A"
+    Choices: []
   - Background: {fileID: 21300000, guid: f7850828e20da414a87b5fcfbb79cecc, type: 3}
     CharacterImage: {fileID: 21300000, guid: 069c096c1b527ec418f8cfc70ccb750d, type: 3}
     SFX: {fileID: 8300000, guid: d884fdac910b4fe499da72fa5205fe1c, type: 3}
-    StoryText: "\u306A\u3041\uFF5E"
+    StoryText: "\u3048\u3048\u3063"
     CharacterName: "\u30DD\u30B3 from \u30AF\u30FC\u30EB\u30DD\u30B3"
+    Choices:
+    - Text: "\u306A\u3041\uFF5E"
+      NextStoryIndex: 0
+      NextTextIndex: 4
+    - Text: "\u306B\u3043\uFF5E"
+      NextStoryIndex: 0
+      NextTextIndex: 4
   - Background: {fileID: 21300000, guid: f7850828e20da414a87b5fcfbb79cecc, type: 3}
     CharacterImage: {fileID: 21300000, guid: ed7fb73d6d47f4141b4cd7ed2e0d041f, type: 3}
     SFX: {fileID: 0}
     StoryText: "\u306B\u3043\uFF5E\uFF01\uFF1F\u3084\u3063\u3061\u307E\u3063\u305F\u306A\u3042\uFF01"
-    CharacterName: "\u30DD\u30B3 from \u30AF\u30FC\u30EB\u30DD\u30B3"
+    CharacterName: poko from cool-poko
+    Choices: []
   - Background: {fileID: 21300000, guid: f7850828e20da414a87b5fcfbb79cecc, type: 3}
     CharacterImage: {fileID: 21300000, guid: f150a395bab1b0644a6b5f1b311a17ed, type: 3}
     SFX: {fileID: 8300000, guid: 9dca0a815d9a0304d955d644626475c2, type: 3}
     StoryText: "\u7B2C\u4E00\u7AE0\u3000\u30AD\u30EA\u30F3\u30EA\u30AD\u306E\u6DCB\u83CC\u306E\u90E8\u5206"
     CharacterName: 
+    Choices: []
   - Background: {fileID: 21300000, guid: 280064d2c7a394449bb39df2f42d0d1c, type: 3}
     CharacterImage: {fileID: 21300000, guid: f150a395bab1b0644a6b5f1b311a17ed, type: 3}
     SFX: {fileID: 0}
     StoryText: "\u4EBA\u985E\u304C\u5897\u3048\u3059\u304E\u305F\u4EBA\u53E3\u3092\u5B87\u5B99\u306B\u79FB\u6C11\u3055\u305B\u308B\u3088\u3046\u306B\u306A\u3063\u3066\u3001\u65E2\u306B\u534A\u4E16\u7D00\u304C\u904E\u304E\u3066\u3044\u305F\u3002 "
     CharacterName: 
+    Choices: []
   - Background: {fileID: 21300000, guid: 280064d2c7a394449bb39df2f42d0d1c, type: 3}
     CharacterImage: {fileID: 21300000, guid: f150a395bab1b0644a6b5f1b311a17ed, type: 3}
     SFX: {fileID: 0}
     StoryText: "\u5730\u7403\u306E\u5468\u308A\u306E\u5DE8\u5927\u306A\u4EBA\u5DE5\u90FD\u5E02\u306F\u4EBA\u985E\u306E\u7B2C\u4E8C\u306E\u6545\u90F7\u3068\u306A\u308A\u3001\u4EBA\u3005\u306F\u305D\u3053\u3067\u5B50\u3092\u7523\u307F\u3001\u80B2\u3066\u3001\u305D\u3057\u3066\u6B7B\u3093\u3067\u3044\u3063\u305F\u3002"
     CharacterName: 
+    Choices: []
   bgm: 0

@@ -407,6 +407,8 @@ MonoBehaviour:
   storyText: {fileID: 1556097740}
   characterName: {fileID: 810940110}
   soundManager: {fileID: 881701350}
+  choicesContainer: {fileID: 0}
+  choiceButtonSprite: {fileID: 0}
 --- !u!4 &444472291
 Transform:
   m_ObjectHideFlags: 0
@@ -554,8 +556,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "A\u3055\u3093"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c2371643f67b742469d1787e77fb4c68, type: 2}
-  m_sharedMaterial: {fileID: 8497301572863382714, guid: c2371643f67b742469d1787e77fb4c68, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 13252344ff5521e43815ac22c241fe32, type: 2}
+  m_sharedMaterial: {fileID: -2566944645434042488, guid: 13252344ff5521e43815ac22c241fe32, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1138,8 +1140,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u3042aA=!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7df5ed2fc2f85f542b92cdab313a0687, type: 2}
-  m_sharedMaterial: {fileID: -1287695411769427760, guid: 7df5ed2fc2f85f542b92cdab313a0687, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b8115383b2e10264b913ebd7bf3b4449, type: 2}
+  m_sharedMaterial: {fileID: -3194726830827051838, guid: b8115383b2e10264b913ebd7bf3b4449, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
